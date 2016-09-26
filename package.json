@@ -1,0 +1,15 @@
+{
+  "title": "Revues en ligne ENS Cachan",
+  "name": "biblicachan",
+  "version": "0.0.1",
+  "description": "Acces rapide aux revues en ligne via bibli.ens-cachan.fr",
+  "main": "index.js",
+  "author": "Lucas Gautheron",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
