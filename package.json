@@ -11,5 +11,12 @@
   "license": "MIT",
   "keywords": [
     "jetpack"
-  ]
+  ],
+  "preferences": [{
+    "name": "newTab",
+    "title": "Open in new tab",
+    "description": "Open in new tab",
+    "type": "bool",
+    "value": true
+  }]
 }
