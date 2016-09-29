@@ -10,10 +10,14 @@ var menuItem = contextMenu.Item({
                  '});',
   accessKey: "l",
   onMessage: function () {
+    var host = '.bibliopam.ens-cachan.fr';
     var url = require("sdk/url").URL(tabs.activeTab.url);
-    var bibliUrl = 'https://' + url.host.replace(/\./g, '-') + '.bibliopam.ens-cachan.fr' + url.path;
+
+    if (url.host.substr(url.host.length - host.length) == host) return false;
+
+    var bibliUrl = 'https://' + url.host.replace(/\./g, '-') + host + url.path;
     var newTab = require('sdk/simple-prefs').prefs['newTab'];
-    if(newTab) {
+    if (newTab) {
       tabs.open(bibliUrl);
     } else {
       tabs.activeTab.url = bibliUrl;
